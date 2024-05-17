@@ -1,0 +1,34 @@
+/* body{
+    background-color: aqua;
+} */
+
+/* cards */
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    background-color: white;
+    opacity: .2;
+}
+
+.blog-link{
+    text-decoration: none;
+
+}
+.btns{
+    display: flex;
+}
+.navbar{
+    /* height: 5rem; */
+    background-color: white;
+}

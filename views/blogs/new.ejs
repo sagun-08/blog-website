@@ -1,0 +1,28 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    
+<div class="row mt-4">
+  <div class="col-8 offset-2">
+    <h3>Create new blog</h3>
+    <form method="POST" action="/blog" class="needs-validation" enctype="multipart/form-data" >
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input name="blog[description]" type="text" placeholder="enter description" class="form-control" required>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="thought" class="form-label">Thought</label>
+             <textarea name="blog[thought]" placeholder="enter thought" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label"> Upload blog Image</label>
+            <input name="blog[image]" class="form-control" placeholder="enter image URK/Link" type="file" required>
+        </div>
+        
+        <button class="btn btn-success mt-4">Add</button>
+    </form>
+  </div>
+</div>
+    
+    
+</body>

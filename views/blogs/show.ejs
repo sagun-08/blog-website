@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+    <div class="card mt-2 offset-2" style="width: 45rem;">
+        <h1>all blogs</h1>
+        <img src="<%=blog.image.url%>" style="width: 45rem;"/> 
+        <div class="card-body">
+            <p class="card-text"> Created at: <%= blog.createdAt.toString().split(" ")[4] %> </p>
+            <p class="card-text">Date: <%= blog.createdAt.toString().split(" ").slice(0,4).join("-") %></p>
+            <p class="card-text"> Created By: <%=blog.owner.username%></p>
+            <p class="card-text"> <%=blog.thought%></p>
+        </div>
+      </div>
+      
+    <div class="btns">
+       <a class="btn btn-success col-1 offset-2" href="/blog/<%=blog._id%>/edit">Edit</a>
+       <form method="POST" action="/blog/<%=blog._id%>?_method=DELETE">
+            <button class="btn btn-danger  offset-4">Delete</button>
+       </form>
+    </div>
+    
+</body>

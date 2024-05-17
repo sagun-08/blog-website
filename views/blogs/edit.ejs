@@ -1,0 +1,24 @@
+<% layout('/layouts/boilerplate') %>
+<body>
+<div class="row mt-4">
+    <div class="col-8 offset-2">
+        <h3>Edit your blog</h3>
+    <form method="POST" action="/blog/<%=blog._id%>?_method=PUT">
+        
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input name="blog[description]" value="<%=blog.description%>" class="form-control" type="text" >
+    </div>
+    <div class="mb-3">
+        <label for="thought" class="form-label">Thought</label>
+        <textarea name="blog[thought]" class="form-control" ><%=blog.thought%></textarea>
+    </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input name="blog[image]" value="<%=blog.image%>" class="form-control"  type="text">
+        </div>
+        <button class="btn btn-success mt-4">Edit</button>
+    </form>
+ </div>
+</div>
+</body>
